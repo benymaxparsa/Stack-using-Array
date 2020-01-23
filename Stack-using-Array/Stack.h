@@ -13,7 +13,7 @@ public:
 	Stack() { top = -1; }
 	~Stack(){}
 	int pop();
-	void push(int x);
+	bool push(int x);
 	int peek();
 	bool isEmpty();
 	int size();

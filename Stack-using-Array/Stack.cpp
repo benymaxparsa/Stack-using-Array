@@ -2,29 +2,42 @@
 
 int Stack::pop()
 {
-	return 0;
+	if (isEmpty())
+		return 0;
+	else
+		return arr[top--];
 }
 
-void Stack::push(int x)
+bool Stack::push(int x)
 {
+	if (isFull())
+		return false;
+	else
+	{
+		arr[++top] = x;
+		return true;
+	}
 }
 
 int Stack::peek()
 {
-	return 0;
+	if (isEmpty())
+		return 0;
+	else
+		return arr[top];
 }
 
 bool Stack::isEmpty()
 {
-	return false;
+	return (top < 0);
 }
 
 int Stack::size()
 {
-	return 0;
+	return (top + 1);
 }
 
 bool Stack::isFull()
 {
-	return false;
+	return (top >= (MAX-1));
 }
